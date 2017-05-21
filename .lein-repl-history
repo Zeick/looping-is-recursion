@@ -1,0 +1,58 @@
+(use 'looping-is-recursion)
+(seq= [1 2 3] [1 2 3 4])
+(seq= [1 2 4] [1 2 4])
+(seq= [1 2 4] [])
+exit
+(use 'looping-is-recursion)
+(seq= [1 2 4] [])
+(seq= [1 2 4] [1 2 4])
+exit
+(use 'looping-is-recursion)
+(seq= [1 2 4] [])
+(seq= [1 2 4] [1 2 4])
+exit
+(defn toggle [a-set elem]
+  (if (contains? a-set elem)
+    (disj a-set elem)
+    (conj a-set elem)
+    )
+)
+(toggle #{} 1)
+(toggle #{1 2 3} 1)
+(toggle #{2 3} 1)
+(use 'looping-is-recursion)
+(parity [1 2 3])
+(parity [1 1 2 3])
+exit
+(use 'looping-is-recursion)
+(parity [1 1 2 3])
+exit
+(use 'looping-is-recursion)
+(fast-fibo 0)
+(fast-fibo 1)
+(fast-fibo 2)
+exit
+(use 'looping-is-recursion)
+(fast-fibo 2)
+(fast-fibo 1)
+(fast-fibo 0)
+(fast-fibo 10)
+(+ 1 1)
+(+ 1 1 2 3 5 8)
+(fast-fibo 3)
+exit
+(use 'looping-is-recursion)
+(fast-fibo 2)
+(fast-fibo 3)
+(fast-fibo 4)
+exit
+(use 'looping-is-recursion)
+(fast-fibo 4)
+(fast-fibo 6)
+exit
+(contains? #{1 2} 1)
+(seq #{1 4 6)}
+(seq #{1 4 6})
+exit
+(conj [] 3)
+exit
